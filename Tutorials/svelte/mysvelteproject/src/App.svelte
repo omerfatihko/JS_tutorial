@@ -4,6 +4,11 @@
 	let kufur = "adam ol lan";
 	let firstName = "Bitch";
 	let lastName = "Bitchinson";
+	let kitapListesi = [
+		{bookName: "hitchhiker's guide to the galaxy", noPages: 610, id: 1},
+		{bookName: "Dune 1", noPages: 312, id: 2},
+		{bookName: "the name of the wind", noPages: 783, id: 3}
+	];
 	//reactive value
 	$: fullName = `${firstName} ${lastName}`;
 
@@ -13,6 +18,9 @@
 	
 	const handleInput = (e) => {
 		kufur = e.target.value;
+	};
+	const cahilles = (id) => {
+		kitapListesi = kitapListesi.filter( (kitap) => kitap.id != id )
 	};
 </script>
 
@@ -26,6 +34,16 @@
 	<p>Gimme yo name {fullName}</p>
 	<input type="text" bind:value={firstName}>
 	<input type="text" bind:value={lastName}>
+	<h2>Okuduğum kitaplar</h2>
+	{#each kitapListesi as kitap (kitap.id)}
+		<div>
+			<h4>{kitap.bookName}</h4>
+			<p>{kitap.noPages} sayfa</p>
+			<button on:click={()=>cahilles(kitap.id)}>Cahilleş</button>
+		</div>
+	{:else}
+		<p>Cahil köpek</p>
+	{/each}
 </main>
 
 <style>
