@@ -1,8 +1,12 @@
 <script>
 	let name = "Modafaka";
-	let lanet = "lanet lanetlendik"
+	let lanet = "lanet lanetlendik";
+	let kufur = "adam ol lan";
 	const handleClick = () => {
 		lanet = "lanet kalktı"
+	};
+	const handleInput = (e) => {
+		kufur = e.target.value;
 	};
 </script>
 
@@ -11,6 +15,8 @@
 	<!--<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>-->
 	<p>{lanet}</p>
 	<button on:click={handleClick}>laneti kaldır</button>
+	<input type="text" bind:value={kufur}> <!--on:input={handleInput} value={kufur}-->
+	<p>{kufur}</p>
 </main>
 
 <style>
