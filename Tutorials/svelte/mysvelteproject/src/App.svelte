@@ -2,9 +2,15 @@
 	let name = "Modafaka";
 	let lanet = "lanet lanetlendik";
 	let kufur = "adam ol lan";
+	let firstName = "Bitch";
+	let lastName = "Bitchinson";
+	//reactive value
+	$: fullName = `${firstName} ${lastName}`;
+
 	const handleClick = () => {
 		lanet = "lanet kalktı"
 	};
+	
 	const handleInput = (e) => {
 		kufur = e.target.value;
 	};
@@ -17,6 +23,9 @@
 	<button on:click={handleClick}>laneti kaldır</button>
 	<input type="text" bind:value={kufur}> <!--on:input={handleInput} value={kufur}-->
 	<p>{kufur}</p>
+	<p>Gimme yo name {fullName}</p>
+	<input type="text" bind:value={firstName}>
+	<input type="text" bind:value={lastName}>
 </main>
 
 <style>
