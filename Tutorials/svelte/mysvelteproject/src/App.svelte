@@ -1,10 +1,16 @@
 <script>
-	export let name;
+	let name = "Modafaka";
+	let lanet = "lanet lanetlendik"
+	const handleClick = () => {
+		lanet = "lanet kalktı"
+	};
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<!--<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>-->
+	<p>{lanet}</p>
+	<button on:click={handleClick}>laneti kaldır</button>
 </main>
 
 <style>
