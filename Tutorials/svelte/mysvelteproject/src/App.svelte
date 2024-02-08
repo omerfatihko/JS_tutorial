@@ -6,6 +6,7 @@
 	let kufur = "adam ol lan";
 	let firstName = "Bitch";
 	let lastName = "Bitchinson";
+	let showModal = false;	
 	let kitapListesi = [
 		{bookName: "hitchhiker's guide to the galaxy", noPages: 610, id: 1},
 		{bookName: "Dune 1", noPages: 312, id: 2},
@@ -24,9 +25,12 @@
 	const cahilles = (id) => {
 		kitapListesi = kitapListesi.filter( (kitap) => kitap.id != id )
 	};
+	const toggleModal = () => {
+		showModal = !showModal
+	}
 </script>
 
-<Modal/>
+<Modal  message = "Why are you ghei" {showModal} on:click={toggleModal}/>
 <main>
 	<h1>Hello {name}!</h1>
 	<!--<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>-->
@@ -47,6 +51,7 @@
 	{:else}
 		<p>Cahil köpek</p>
 	{/each}
+	<button on:click={toggleModal}>Are you ghei?</button>
 </main>
 
 <style>

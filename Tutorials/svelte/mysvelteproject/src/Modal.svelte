@@ -1,12 +1,15 @@
 <script>
-    let showModal = true;
-    let isGhei = true;
+    export let message;
+    export let showModal = false;
+    export let isGhei = false;
+    let gheigif = "images/yrughei.gif";
 </script>
 
 {#if showModal}
-    <div class="backdrop" class:stat={isGhei}>
+    <div class="backdrop" class:stat={isGhei} on:click>
         <div class="modal">
-            <h2>Why are you ghei</h2>
+            <h2>{message}</h2>
+            <img src={gheigif} alt="">
         </div>
     </div>
 {/if}
