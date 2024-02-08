@@ -1,4 +1,6 @@
 <script>
+	import Modal from "./Modal.svelte";
+
 	let name = "Modafaka";
 	let lanet = "lanet lanetlendik";
 	let kufur = "adam ol lan";
@@ -24,6 +26,7 @@
 	};
 </script>
 
+<Modal/>
 <main>
 	<h1>Hello {name}!</h1>
 	<!--<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>-->
