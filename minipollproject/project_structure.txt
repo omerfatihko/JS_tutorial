@@ -1,0 +1,18 @@
+Project tree
+-------------
+App{
+    Header;
+    Footer;
+    CreatePollForm;
+    PollList{
+        PollDetails;
+    };
+}
+
+UI elements
+-------------
+Button
+Card
+Tabs
+
+-Data Store
