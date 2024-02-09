@@ -6,10 +6,11 @@
 </script>
 
 {#if showModal}
-    <div class="backdrop" class:stat={isGhei} on:click>
+    <div class="backdrop" class:stat={isGhei} on:click|self>
         <div class="modal">
             <h2>{message}</h2>
             <img src={gheigif} alt="">
+            <slot></slot>
         </div>
     </div>
 {/if}

@@ -1,5 +1,6 @@
 <script>
 	import Modal from "./Modal.svelte";
+	import AddBookForm from "./AddBookForm.svelte";
 
 	let name = "Modafaka";
 	let lanet = "lanet lanetlendik";
@@ -30,7 +31,9 @@
 	}
 </script>
 
-<Modal  message = "Why are you ghei" {showModal} on:click={toggleModal}/>
+<Modal  message = "Why are you ghei" {showModal} on:click={toggleModal}>
+	<AddBookForm/>
+</Modal>
 <main>
 	<h1>Hello {name}!</h1>
 	<!--<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>-->
@@ -51,7 +54,7 @@
 	{:else}
 		<p>Cahil köpek</p>
 	{/each}
-	<button on:click={toggleModal}>Are you ghei?</button>
+	<button on:click|once={toggleModal}>Are you ghei?</button>
 </main>
 
 <style>
