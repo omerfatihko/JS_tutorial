@@ -2,6 +2,7 @@
     <h1>
         <img src="\img\elections-poll.svg" alt="Mini Poll Logo">
     </h1>
+    <h1>Ko Mini Polls</h1>
 </header>
 
 <style>
