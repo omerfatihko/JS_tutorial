@@ -17,8 +17,8 @@
 		{
 			id:1,
 			question: "Dummy question",
-			optionA: "Dummy answer A",
-			optionB: "Dummy answer B",
+			optionA: "Dummy option A",
+			optionB: "Dummy option B",
 			votesA: 7,
 			votesB: 3
 		},
