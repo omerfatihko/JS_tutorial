@@ -1,3 +1,23 @@
+//module 
+
+
+/* const myObj = {
+    name: "Fatih",
+    hobbies: ["gaming", "cats", "code"],
+    hello: function() {
+        console.log("hello");
+    }
+};
+
+const sendJSON = JSON.stringify(myObj);
+console.log(sendJSON);
+console.log(typeof sendJSON);
+console.log(sendJSON.name);
+
+const receiveJSON = JSON.parse(sendJSON);
+console.log(receiveJSON);
+console.log(typeof receiveJSON) */
+
 /* //Factory function
 function pizzaFactory(pizzaSize) {
     const crust = "original";
@@ -10,7 +30,7 @@ function pizzaFactory(pizzaSize) {
 const myPizza = pizzaFactory("small");
 myPizza.bake(); */
 
-//js classes
+/* //js classes
 class Pizza {
     crust = "original";
     #sauce = "traditional";
@@ -31,7 +51,7 @@ class Pizza {
 
 const myPizza = new Pizza("large");
 myPizza.hereYouGo();
-console.log(myPizza);
+console.log(myPizza); */
 
 /* //objects
 const myObj = {name: "Fatih"};
